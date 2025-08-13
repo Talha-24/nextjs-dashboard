@@ -14,7 +14,7 @@ const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
     name: 'Invoices',
-    href: '/dashboard/invoices',
+    href: '/dashboard/invoices',aaaaaaaaaaaaaaaaaaa
     icon: DocumentDuplicateIcon,
   },
   { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
@@ -26,6 +26,7 @@ export default function NavLinks() {
     <>
       {links.map((link) => {
         const LinkIcon = link.icon;
+        
         return (
           <Link
             key={link.name}
@@ -35,9 +36,7 @@ export default function NavLinks() {
               {
                 'bg-sky-100 text-blue-600': pathname === link.href,
               },
-            )}
-
-          >
+            )}>
             <LinkIcon className="w-6" />
             <p className="hidden md:block">{link.name}</p>
           </Link>
